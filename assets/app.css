@@ -85,6 +85,61 @@ h1 {
     color: #667085;
 }
 
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 14px;
+    padding: 18px;
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.filter-field {
+    display: grid;
+    min-width: 220px;
+    flex: 1;
+    gap: 7px;
+}
+
+.filter-field label {
+    color: #344054;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.filter-field input,
+.filter-field select {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 11px;
+    border: 1px solid #cfd6e2;
+    border-radius: 6px;
+    color: #172033;
+    background: #fff;
+    font: inherit;
+}
+
+.filter-field input:focus,
+.filter-field select:focus {
+    border-color: #2457c5;
+    outline: 3px solid rgb(36 87 197 / 15%);
+}
+
+.clear-filters {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.results-summary {
+    margin: 0 0 12px;
+    color: #667085;
+    font-size: 0.9rem;
+}
+
 .button {
     display: inline-flex;
     min-height: 42px;
@@ -204,6 +259,40 @@ tbody tr:last-child td {
     margin-bottom: 6px;
     color: #344054;
     font-size: 1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.page-link {
+    display: inline-flex;
+    min-width: 38px;
+    min-height: 38px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    color: #344054;
+    background: #fff;
+    font-size: 0.9rem;
+}
+
+.page-link:hover {
+    background: #f9fafb;
+    text-decoration: none;
+}
+
+.page-link.is-current {
+    border-color: #2457c5;
+    color: #fff;
+    background: #2457c5;
+    font-weight: 600;
 }
 
 .detail-card {
@@ -379,6 +468,15 @@ tbody tr:last-child td {
     .page-heading {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .filter-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-field {
+        min-width: 0;
     }
 
     .form-card {
